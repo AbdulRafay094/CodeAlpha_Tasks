@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abdul Rafay — Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="noise"></div>
+
+<!-- ===== EDITOR TAB BAR (NAV) ===== -->
+<header class="tabbar" id="tabbar">
+  <div class="tabbar-left">
+    <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+  </div>
+  <nav class="tabs">
+    <a href="#about" class="tab active" data-tab="about.tsx">about.tsx</a>
+    <a href="#skills" class="tab" data-tab="skills.json">skills.json</a>
+    <a href="#projects" class="tab" data-tab="projects.tsx">projects.tsx</a>
+    <a href="#resume" class="tab" data-tab="resume.pdf">resume.pdf</a>
+    <a href="#contact" class="tab" data-tab="contact.tsx">contact.tsx</a>
+  </nav>
+  <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">☰</button>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="top">
+  <div class="gutter" aria-hidden="true">
+    <span>01</span><span>02</span><span>03</span><span>04</span><span>05</span>
+  </div>
+  <div class="hero-inner reveal">
+    <p class="eyebrow mono">~/abdul-rafay <span class="caret">█</span></p>
+    <h1 class="hero-title">
+      Building things<br>
+      with <span class="hl">code</span> &amp; <span class="hl-alt">curiosity.</span>
+    </h1>
+    <p class="hero-sub">
+      CS undergrad at UMT, Lahore — building full‑stack apps, exploring machine learning,
+      and shipping clean, working software.
+    </p>
+    <div class="hero-actions">
+      <a href="#projects" class="btn btn-primary">View Projects</a>
+      <a href="resume.pdf" class="btn btn-ghost" target="_blank" rel="noopener">Download Résumé ↓</a>
+    </div>
+    <div class="hero-meta mono">
+      <span>CGPA 3.97/4.0</span><span class="sep">/</span>
+      <span>Lahore, Pakistan</span><span class="sep">/</span>
+      <span>Open to opportunities</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section class="panel" id="about">
+  <div class="panel-head">
+    <span class="file-label mono">about.tsx</span>
+    <span class="panel-line mono">const profile = {`{`}</span>
+  </div>
+  <div class="panel-body reveal">
+    <div class="about-grid">
+      <div class="about-text">
+        <h2 class="section-title">About</h2>
+        <p>
+          I'm Abdul Rafay, a Computer Science student at the University of Management
+          and Technology, Lahore — currently maintaining a 3.97 CGPA while building
+          real, working software across the stack.
+        </p>
+        <p>
+          My coursework spans Data Structures, Algorithms, Databases, Web Technologies,
+          and Machine Learning, and I like pairing that theory with hands‑on builds:
+          management systems, prediction models, and front‑end interfaces that feel
+          considered rather than templated.
+        </p>
+        <p>
+          During my internship at Muunoob Studios, I worked on front‑end mini‑projects
+          with HTML, Tailwind, and React — sharpening how I think about interactive,
+          component‑based UI in a real team setting.
+        </p>
+      </div>
+      <ul class="about-facts mono">
+        <li><span class="k">role</span><span class="v">CS Undergrad</span></li>
+        <li><span class="k">school</span><span class="v">UMT, Lahore</span></li>
+        <li><span class="k">grad</span><span class="v">July 2027</span></li>
+        <li><span class="k">cgpa</span><span class="v">3.97 / 4.0</span></li>
+        <li><span class="k">focus</span><span class="v">Web · ML · Systems</span></li>
+        <li><span class="k">awards</span><span class="v">Rector's &amp; Dean's Merit</span></li>
+      </ul>
+    </div>
+  </div>
+  <span class="panel-line mono closing">{`}`};</span>
+</section>
+
+<!-- ===== SKILLS ===== -->
+<section class="panel alt" id="skills">
+  <div class="panel-head">
+    <span class="file-label mono">skills.json</span>
+  </div>
+  <div class="panel-body reveal">
+    <h2 class="section-title">Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <h3 class="mono group-title">"languages"</h3>
+        <div class="chips">
+          <span class="chip">C++</span><span class="chip">Python</span><span class="chip">JavaScript</span>
+          <span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">SQL</span>
+          <span class="chip">React</span><span class="chip">Node.js</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3 class="mono group-title">"tools"</h3>
+        <div class="chips">
+          <span class="chip">Git</span><span class="chip">GitHub</span><span class="chip">Postman</span>
+          <span class="chip">Jira</span><span class="chip">Jupyter</span><span class="chip">MATLAB</span>
+          <span class="chip">LaTeX</span><span class="chip">MS Office</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3 class="mono group-title">"coursework"</h3>
+        <div class="chips">
+          <span class="chip">Data Structures</span><span class="chip">Algorithms</span>
+          <span class="chip">Databases</span><span class="chip">Web Tech</span>
+          <span class="chip">Data Science</span><span class="chip">AI</span><span class="chip">ML</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROJECTS ===== -->
+<section class="panel" id="projects">
+  <div class="panel-head">
+    <span class="file-label mono">projects.tsx</span>
+  </div>
+  <div class="panel-body reveal">
+    <h2 class="section-title">Projects</h2>
+    <div class="project-grid">
+
+      <article class="card">
+        <div class="card-top mono">function <span class="fn">LibraryPortal</span>()</div>
+        <h3>Online Library Management Portal</h3>
+        <p>Responsive library system with full CRUD for books, users, and borrowing
+           records — structured workflows for issuing, returning, and tracking books.</p>
+        <div class="tags mono"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Node.js</span></div>
+      </article>
+
+      <article class="card">
+        <div class="card-top mono">function <span class="fn">HospitalAppointments</span>()</div>
+        <h3>Smart Hospital Appointment System</h3>
+        <p>Healthcare web app with CRUD‑based appointment booking, structured
+           frontend/backend interaction supporting dynamic user operations.</p>
+        <div class="tags mono"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Node.js</span></div>
+      </article>
+
+      <article class="card">
+        <div class="card-top mono">function <span class="fn">CVDPredictor</span>()</div>
+        <h3>Cardiovascular Disease Prediction (KNN)</h3>
+        <p>ML model predicting cardiovascular disease with 90% accuracy, using NumPy,
+           Matplotlib, and Seaborn for preprocessing, visualization, and feature analysis.</p>
+        <div class="tags mono"><span>Python</span><span>NumPy</span><span>Seaborn</span></div>
+      </article>
+
+      <article class="card">
+        <div class="card-top mono">class <span class="fn">BankingSystem</span></div>
+        <h3>Banking Management Application</h3>
+        <p>Modular banking system built with OOP principles in C++, simulating
+           real‑world banking operations with structured architecture.</p>
+        <div class="tags mono"><span>C++</span><span>OOP</span></div>
+      </article>
+
+      <article class="card">
+        <div class="card-top mono">class <span class="fn">HotelReservation</span></div>
+        <h3>Hotel Reservation &amp; Management System</h3>
+        <p>C++ reservation system using data structures to manage bookings, customer
+           records, and room availability — optimized for performance and maintainability.</p>
+        <div class="tags mono"><span>C++</span><span>Data Structures</span></div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== RESUME ===== -->
+<section class="panel alt" id="resume">
+  <div class="panel-head">
+    <span class="file-label mono">resume.pdf</span>
+  </div>
+  <div class="panel-body reveal resume-body">
+    <h2 class="section-title">Résumé</h2>
+    <p class="resume-copy">
+      Education, experience, and full project history — packaged as a single PDF.
+    </p>
+    <a href="resume.pdf" class="btn btn-primary" target="_blank" rel="noopener">Download Résumé ↓</a>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="panel contact-panel" id="contact">
+  <div class="panel-head">
+    <span class="file-label mono">contact.tsx</span>
+  </div>
+  <div class="panel-body reveal">
+    <h2 class="section-title">Let's talk</h2>
+    <p class="contact-copy">Open to internships, collaborations, and interesting problems.</p>
+    <div class="contact-links">
+      <a href="mailto:iamabdrafay@gmail.com" class="contact-link">
+        <span class="mono label">email</span><span class="value">iamabdrafay@gmail.com</span>
+      </a>
+      <a href="tel:+923165324870" class="contact-link">
+        <span class="mono label">phone</span><span class="value">+92 316 5324870</span>
+      </a>
+      <a href="https://linkedin.com/in/abdulrafay094" class="contact-link" target="_blank" rel="noopener">
+        <span class="mono label">linkedin</span><span class="value">/in/abdulrafay094</span>
+      </a>
+      <a href="#top" class="contact-link">
+        <span class="mono label">location</span><span class="value">Lahore, Pakistan</span>
+      </a>
+    </div>
+  </div>
+  <footer class="footer mono">© 2026 Abdul Rafay — built with HTML, CSS &amp; JS</footer>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

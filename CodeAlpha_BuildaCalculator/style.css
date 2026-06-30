@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Archivo:wght@500;700;800&display=swap');
+
+:root{
+  --paper: #f3ede0;
+  --ink: #2b2620;
+  --ink-soft: #8a8170;
+  --body-bg: #1d2421;
+  --machine: #25302b;
+  --machine-edge: #1a2320;
+  --amber: #e8923c;
+  --amber-deep: #c4701f;
+  --coral: #e35b4f;
+  --coral-deep: #b73f35;
+  --key-shadow: rgba(0,0,0,0.45);
+  --focus: #7fd8c4;
+}
+
+*{ box-sizing: border-box; }
+
+body{
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(circle at 20% 15%, rgba(255,255,255,0.04), transparent 40%),
+    var(--body-bg);
+  font-family: 'Archivo', sans-serif;
+  padding: 32px 16px;
+}
+
+.calc{
+  width: 100%;
+  max-width: 340px;
+  background: linear-gradient(160deg, var(--machine), var(--machine-edge));
+  border-radius: 22px;
+  padding: 18px 16px 22px;
+  box-shadow:
+    0 30px 60px rgba(0,0,0,0.5),
+    inset 0 1px 0 rgba(255,255,255,0.06);
+  position: relative;
+}
+
+.calc::before{
+  content: "";
+  position: absolute;
+  top: 10px; left: 10px; right: 10px; bottom: 10px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.04);
+  pointer-events: none;
+}
+
+/* the paper tape readout */
+.tape{
+  background: var(--paper);
+  border-radius: 10px;
+  padding: 18px 16px 14px;
+  margin-bottom: 16px;
+  box-shadow:
+    inset 0 2px 6px rgba(0,0,0,0.25),
+    0 1px 0 rgba(255,255,255,0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+.tape::after{
+  /* torn paper edge effect */
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: -1px;
+  height: 8px;
+  background:
+    linear-gradient(135deg, var(--paper) 50%, transparent 50%) 0 0/10px 10px repeat-x;
+}
+
+.tape-line{
+  font-family: 'Space Mono', monospace;
+  text-align: right;
+  color: var(--ink);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.history{
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  min-height: 1.2em;
+  letter-spacing: 0.02em;
+}
+
+.display{
+  font-size: clamp(1.8rem, 9vw, 2.6rem);
+  font-weight: 700;
+  margin-top: 4px;
+  letter-spacing: -0.01em;
+}
+
+/* keypad */
+.keys{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.key{
+  border: none;
+  border-radius: 12px;
+  padding: 18px 0;
+  font-family: 'Archivo', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--paper);
+  background: #34403a;
+  box-shadow:
+    0 3px 0 var(--key-shadow),
+    inset 0 1px 0 rgba(255,255,255,0.08);
+  cursor: pointer;
+  transition: transform 0.06s ease, box-shadow 0.06s ease, background 0.15s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.key:hover{ background: #3c4a43; }
+
+.key:active,
+.key.is-pressed{
+  transform: translateY(3px);
+  box-shadow: 0 0 0 var(--key-shadow), inset 0 1px 0 rgba(255,255,255,0.08);
+}
+
+.key:focus-visible{
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.key--func{
+  background: #4a4338;
+  color: var(--amber);
+}
+.key--func:hover{ background: #564e41; }
+
+.key--op{
+  background: var(--amber-deep);
+  color: var(--paper);
+}
+.key--op:hover{ background: var(--amber); }
+
+.key--equal{
+  background: var(--coral-deep);
+  color: var(--paper);
+}
+.key--equal:hover{ background: var(--coral); }
+
+.key--wide{
+  grid-column: span 2;
+}
+
+.hint{
+  text-align: center;
+  color: var(--ink-soft);
+  font-size: 0.72rem;
+  margin: 14px 0 0;
+  letter-spacing: 0.02em;
+}
+
+@media (prefers-reduced-motion: reduce){
+  .key{ transition: none; }
+}
